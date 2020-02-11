@@ -1,0 +1,144 @@
+body {
+    background:#AAAAAA;
+    font:normal 0.8em Google Sans,sans-serif;
+    font-size:16px;
+    margin:0.5;
+    padding:5px;
+    padding-bottom:5px;
+}
+
+i.icon-taxi {
+    color: #febb1b;
+}
+
+icon {
+    vertical-align: middle;
+}
+
+card {
+    border-radius: 10px;
+    font-size:16px;
+    align-items: center;
+    vertical-align: middle;    
+}
+
+div {
+    padding:15px;
+    padding-bottom:10px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+span {
+    padding: 15px;
+}
+
+.connected {
+    font-size:72px;
+    vertical-align: middle;
+    color: #febb1b;
+}
+
+.disconnected {
+    font-size:72px;
+    vertical-align: middle;
+    color:#db3236;
+}
+
+.taxi-card {
+    word-wrap: ellipses;
+    background: #febb1b;
+    border-style: dotted;
+    border-width: 3px;
+    max-width: 20rem;
+    display: inline-block  !important;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.notification {
+    border-color: #000000;
+    vertical-align: middle;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    border-style: dotted;
+    border-radius: 10px;
+    background: #febb1b;
+    text-overflow: ellipses;
+    word-wrap: truncate;
+}
+
+.blinking {
+    animation: blinkingText .2s 3;
+}
+
+.fare {
+    font: bold 0.8em Roboto Mono,mono;
+    font-size: 48px !important;
+    color: #FF3333 !important;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: .50s;
+    -webkit-animation-duration: .50s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+}
+
+.card-header {
+    font-size: 18px;
+    text-overflow: ellipses;
+    align-items: center;
+    vertical-align: middle;
+    word-wrap: truncate;
+}
+
+.stat {
+    font:bold 18px Roboto Mono,monospace;
+    vertical-align: middle;
+}
+
+.logo {
+    font-family: 'freelance_kamchatkaregular';
+    font-size: 72px;
+    vertical-align: middle;
+}
+
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'freelance_kamchatkaregular';
+    src: url('webfont.woff2') format('woff2'),
+         url('webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

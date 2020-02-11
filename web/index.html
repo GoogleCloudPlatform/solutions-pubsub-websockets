@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>PubSub over Websockets</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="cabdash.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Roboto+Mono" rel="stylesheet" />
+  <link href="cabdash.css" rel="stylesheet">
+</head>
+<body>
+  <br>
+  <div id="header">
+    <span title="click the taxi to start or stop the stream"><b class="logo">D<i id="taxilogo"
+          class="material-icons button fadeIn" onclick="connect()"
+          style="font-size:72px;vertical-align: middle;">local_taxi</i>SHCAB</b></span>&nbsp;&nbsp;</span>
+    <span>
+      <span title="last message latency">
+        <icon class="material-icons">timer</icon>
+        <span id="lag" class="stat">0</span>
+      </span>
+      <span title="number of active rides">
+        <icon class="material-icons">local_taxi</icon>
+        <span id="activeRides" class="stat">0</span>
+      </span>
+      <span title="message rate (per second)">
+        <icon class="material-icons">message</icon>
+        <span id="messageRate" class="stat">0</span>
+      </span>
+      <span title="total amount metered across all rides">
+        <icon class="material-icons">money</icon>
+        <span id="totalMeter" class="stat">0</span>
+      </span>
+      <span title="# of total passengers (avg per ride / avg meter) ">
+        <icon class="material-icons">person</icon>
+        <span id="totalPassengers" class="stat">0</span>
+      </span>
+    </span>
+    </span>
+  </div>
+  <p>
+    <div style="display:block; text-align: center; width:75%">
+      <span id="alert-message" style="opacity: 0;" class="notification"></span>
+    </div>
+    <div class="card-deck" style="display: inline-block; width: 85%;
+                                opacity: 1" id="containerDiv">
+
+      <div style="max-width:80%;;" id="welcome"
+        class="blinking card taxi-card border-dark flex-fill text-dark mb-3 p-3 fadeIn">
+        <span>
+          <h2>Hail a cab from the header to start the dashboard</h2>
+        </span>
+      </div>
+    </div>
+</body>
+
+</html>
